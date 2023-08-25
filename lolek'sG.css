@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(90deg, rgb(26, 7, 7), rgb(35, 19, 73), rgb(39, 10, 10));
+    background-attachment: fixed;
+    animation: bodyANN 10s infinite ease-in alternate;
+    background-size: 400%;
+}
+@keyframes bodyANN {
+    0% {
+        background-position: left;
+    } 100% {
+        background-position: right;
+    }
+}
+
+.Title-Container{
+    position: absolute;
+    background-color: white;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 28%;
+    top: 2%;
+    border: 2px black solid;
+    border-radius: 10%;
+    box-shadow: 5px 10px black, 10px 10px 8px 10px black;
+    cursor: pointer;
+    z-index: 1000;
+    animation: CONAN 1s ease-in;
+    
+}
+
+@keyframes CONAN {
+    0% {
+        top: 30%;
+    }
+    100% {
+        top: 2%;
+    }
+}
+
+
+.title {
+text-transform: uppercase;
+font-weight: 900;
+font-style: italic;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 4rem;
+color: #ee6352;
+font-style: none;
+
+animation: titleAnn 1s infinite alternate;
+z-index: 1000;
+}
+@keyframes titleAnn {
+0% {
+   color: #ee6352;;
+}
+100% {
+    color: orange;
+}
+}
+.gamesContainer {
+    width: 80%;
+    top: 40%;
+    position: absolute;
+    left: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+}
+.game{
+    height: 300px;
+    border: 2px black solid;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px black, 10px 10px 8px 10px black;
+    display: flex;
+    cursor: pointer;
+    transition: all 250ms;
+}
+.game:hover {
+    transform: translateX(-2%);
+}
+.gameTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+    font-size: xx-large;
+    text-shadow: 2px 5px purple;
+}
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+.show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+.hiddenB {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(100%);
+}
+.showB {
+    opacity: 1;
+    transform: translateX(0%);
+}
